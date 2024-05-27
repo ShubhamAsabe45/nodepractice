@@ -67,7 +67,7 @@ router.delete('/:id',async (req,res) =>{
     try{
         const personId = req.params.id;
         const response = await Person.findByIdAndDelete(personId);
-        if(!response){
+        if(!response){``
             return res.status(404).json({error:'User not found'});
         }
 
@@ -79,4 +79,5 @@ res.status(500).json({error:'Internal Serverer Error'})
     }
 })
 
+// Module export
 module.exports = router;
